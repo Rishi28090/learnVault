@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnVault</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- if you want -->
+</head>
+<body>
+  <% if (success_msg) { %>
+    <div style="color: green;"><%= success_msg %></div>
+  <% } %>
+  <% if (error_msg) { %>
+    <div style="color: red;"><%= error_msg %></div>
+  <% } %>
+
+  <nav>
+    <a href="/">Home</a>
+    <% if (typeof user !== 'undefined') { %>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% } %>
+  </nav>

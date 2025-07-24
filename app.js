@@ -45,4 +45,7 @@ app.use((req,res,next)=>{
 
 
 app.use('/', require('./routes/main.route.js'));
+
+app.use('/', require('./routes/auth.route'));
+
 module.exports = app;
